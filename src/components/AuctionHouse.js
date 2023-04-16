@@ -5,7 +5,6 @@ import Input from "./Input";
 
 const AuctionHouse = () => {
   const [auctionsItems, setAuctionsItems] = useState([]);
-  /* const [filteredTitle, setFilteredTitle] = useState("Válassz!"); */
   const [inputValues, setInputValues] = useState({
     title: "",
     highestBidderName: "",
@@ -31,10 +30,7 @@ const AuctionHouse = () => {
     "Válassz!",
     ...new Set(auctionsItems.map((auction) => auction.title)),
   ];
-/* 
-  const handleSettlementChange = (event) => {
-    setFilteredTitle(event.target.value);
-  }; */
+
   function inputHandleChange(event) {
     setInputValues({ ...inputValues, [event.target.name]: event.target.value });
   }
